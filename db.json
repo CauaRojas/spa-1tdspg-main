@@ -2,16 +2,16 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "Teclado",
+      "nome": "Tecladoooo",
+      "preco": "102",
       "desc": "Teclado Gamer",
-      "preco": 100,
       "img": "https://picsum.photos/200/300"
     },
     {
       "id": 3,
       "nome": "Monitor",
+      "preco": "160",
       "desc": "Monitor Gamer",
-      "preco": 500,
       "img": "https://picsum.photos/200/300"
     },
     {
@@ -24,8 +24,8 @@
     {
       "id": 5,
       "nome": "Headset",
+      "preco": "160",
       "desc": "Headset Gamer",
-      "preco": 150,
       "img": "https://picsum.photos/200/300"
     },
     {

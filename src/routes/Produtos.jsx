@@ -4,6 +4,7 @@ import {
     AiOutlineEdit as Editar,
     AiOutlineDelete as Excluir,
 } from 'react-icons/ai'
+import { FiEdit as Alterar } from 'react-icons/fi'
 import classes from './Produtos.module.css'
 import { useEffect, useState } from 'react'
 import ModalExemplo from '../components/ModalExemplo/ModalExemplo'
@@ -79,7 +80,7 @@ export default function Produtos() {
                             <th>PREÇO</th>
                             <th>IMG</th>
                             <th>
-                                <Editar /> / <Excluir /> / A
+                                <Editar /> / <Excluir /> / <Alterar />
                             </th>
                         </tr>
                     </thead>
@@ -117,7 +118,7 @@ export default function Produtos() {
                                             setOpen(true)
                                         }}
                                     >
-                                        A
+                                        <Alterar />
                                     </Link>
                                 </td>
                             </tr>
