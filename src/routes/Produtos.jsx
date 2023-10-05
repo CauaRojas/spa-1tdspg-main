@@ -4,7 +4,6 @@ import {
     AiOutlineEdit as Editar,
     AiOutlineDelete as Excluir,
 } from 'react-icons/ai'
-import { FiEdit as Alterar } from 'react-icons/fi'
 import classes from './Produtos.module.css'
 import { useEffect, useState } from 'react'
 import ModalExemplo from '../components/ModalExemplo/ModalExemplo'
@@ -20,7 +19,7 @@ export default function Produtos() {
     // }, []);
 
     const [open, setOpen] = useState(false)
-    const [editProduto, setEditProduto] = useState({})
+    const [editProduto, setEditProduto] = useState(undefined)
 
     useEffect(() => {
         if (!open) {
@@ -37,8 +36,8 @@ export default function Produtos() {
                     setNovaListaProdutos(data)
                 })
                 .catch(error => console.log(error))
+            setEditProduto(undefined)
         }
-        setEditProduto({})
     }, [open])
 
     const handleExcluir = id => {
@@ -80,7 +79,7 @@ export default function Produtos() {
                             <th>PREÇO</th>
                             <th>IMG</th>
                             <th>
-                                <Editar /> / <Excluir /> / <Alterar />
+                                <Editar /> / <Excluir />
                             </th>
                         </tr>
                     </thead>
@@ -100,7 +99,12 @@ export default function Produtos() {
                                 </td>
                                 <td>
                                     {' '}
-                                    <Link to={`/editar/produto/${produto.id}`}>
+                                    <Link
+                                        onClick={() => {
+                                            setEditProduto(produto)
+                                            setOpen(true)
+                                        }}
+                                    >
                                         <Editar />
                                     </Link>{' '}
                                     /{' '}
@@ -111,15 +115,6 @@ export default function Produtos() {
                                     >
                                         <Excluir />
                                     </Link>{' '}
-                                    /{' '}
-                                    <Link
-                                        onClick={() => {
-                                            setEditProduto(produto)
-                                            setOpen(true)
-                                        }}
-                                    >
-                                        <Alterar />
-                                    </Link>
                                 </td>
                             </tr>
                         ))}

@@ -42,7 +42,10 @@
 				width: 70%;
 				margin: 0 auto;
 			}
-
+			input[readOnly] {
+				background-color: #797979;
+				color: #fff;
+			}
 			button {
 				border: $border;
 				border-radius: $borderRadius;

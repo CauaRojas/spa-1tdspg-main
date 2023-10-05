@@ -109,7 +109,7 @@ export default function ModalExemplo(props) {
                                 />
                             </div>
                             <div>
-                                <label htmlFor="idDesc">
+                                <label htmlFor="idImg">
                                     Imagem do Produto:
                                 </label>
                                 <input
