@@ -71,11 +71,13 @@ export default function ModalExemplo(props) {
     if (props.open) {
         return (
             <div className="container">
-                <h1>Cadastrar Produto</h1>
+                <h1>{isEdit ? 'Editar' : 'Cadastrar'} Produto</h1>
                 <div>
                     <form onSubmit={handleSubmit}>
                         <fieldset>
-                            <legend>Novo Produto</legend>
+                            <legend>
+                                {isEdit ? 'Editar' : 'Novo'} Produto
+                            </legend>
                             <div>
                                 <label htmlFor="idProduto">Nome Produto:</label>
                                 <input
@@ -122,7 +124,9 @@ export default function ModalExemplo(props) {
                                 />
                             </div>
                             <div>
-                                <button>CADASTRAR</button>
+                                <button>
+                                    {isEdit ? 'Editar' : 'Cadastrar'}
+                                </button>
                             </div>
                         </fieldset>
                     </form>
